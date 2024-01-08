@@ -1,216 +1,139 @@
-# Challenge: OOP in python to organize the training room
+# Challenge: Use OOP in Python to organize the training room
 
 - Repository: `openspace-organizer`
-- Type of Challenge: `Consolidation`
+- Type: `Consolidation`
 - Duration: `2 days`
-- Deadline: `dd/mm/yy H:i AM/PM`
-- Team challenge : `solo or team`
+- Deadline: `xx/xx/20xx 5:00 PM`
+- Team: `solo or team`
 
-## Mission objectives
+## Mission Objectives
 
-Create an algorithm that randomly assign people to a spot in the openspace.
+Create an algorithm that randomly assign people to a spot in the open space.
 
-![Musical Chairs!](https://i.gifer.com/8OFn.gif)
+![musical chairs](https://i.gifer.com/8OFn.gif)
 
 ## Learning Objectives
 
-- Make a good usage of classes.
-- Use Object-Oriented-Programming (OOP).
-- Use imports in a clean way.
-- Use a clean architecture.
-- Read data from a xls file
-- Structure a project.
-- [OPTIONAL if team] Use git as a team with trello and integrate versioning and management
-  - split functionnalities into tasks
-  - assign tasks to people
-  - develop functionalities on proper branch
-  - use PR to merge branches
+- Make good usage of classes using the Object-oriented programming (OOP) paradigm
+- Use imports in a clean way
+- Use a clean architecture
+- Read data from an Excel file
+- Structure a project
+- [OPTIONAL if in teams] Use Git as a team with Trello and integrate versioning and management
+  - Split functionalities into tasks
+  - Assign tasks to people
+  - Develop functionalities on separate branches
+  - Use pull requests to merge branches
 
 ## The Mission
 
-Your company moved to a new office. Its an openspace with 6 tables of 4 seats. 
-As many of you are new colleagues, you come up with the idea of changing seats everyday and get to know each other better by working side by side with your new colleagues.
+Your company moved to a new office. It's an open space with 6 tables of 4 seats.
 
-You will create a program that runs everyday to re-assign everybody to a new seat. 
+As many of you are new colleagues, you come up with the idea to change seats every day to get to know each other better by working side by side with your new colleagues.
+
+You will create a script that runs each day to re-assign everybody to a new seat. 
 
 ### Must-have features
 
-You want to build a program that allows you to get a list of colleagues from an excel file and place them ***randomly*** on the different tables of the open space.
+You want to build a program that allows you to (i) get a list of colleagues from an Excel file and (ii) place them ***randomly*** on the different tables of the open space.
 
-#### the default setup of the open space is 6 tables of 4 seats → 24 seats ####
+#### The default setup of the open space is 6 tables of 4 seats → 24 seats ####
 
-- The program can take a filepath as an argument to load the list of colleagues. 
-- The program distributes randomly the people on the existing tables and says how much seats are left.
-- The program can deal with the possibility of having to much people in the room.
+- The program can take a filepath as an argument to load the list of colleagues 
+- The program distributes at random the people on the existing tables and says how many seats are left
+- The program can gracefully deal with the possibility of having too many people in the room
 
 ### Nice-to-have features
 
-Now you have a basic working program but you want to make it more interactive and more configurable.
+Once you have a basic program, you want to make it more interactive and more configurable. Below are a couple of suggestions.
 
-- Allow the possibility to define the room setup from a config.json file. Allow the possibility to change dynamically the setup and re-run the program.
-- Make the program more dynamic and interactive by adding the possibilty to add someone in the room (a new colleague arriving or someone being late) and the possibilty to add a table if the room is full.
+- Allow the possibility to ask the program to display the current repartition:
+  - The number of people in the room 
+  - The number of available seats in the room
+  - The number of seats that are left
+- Allow the possibility to define the room setup from a `config.json` file
+- Allow the possibility to change dynamically the setup and re-run the program
+- Allow the possibilty to add someone in the room (for instance, a new colleague arriving or someone being late)
+- Allow the possibilty to add a table if the room is full
 - Improve the algorithm to avoid having someone alone at a table
-- Allow the possibility of which list (or black list) in the excel file → _X wants to be seated beside Y_ or _X doesn't want to be seated beside Y_
-- Allow the possibility to ask : 
-  - how much seats are in the room
-  - how much people are in the room
-  - how much seats are left
-- Create an HTML page to interact with your program that : 
-  - allows you to choose the excel file from your computer
-  - allows you to interact with the different features of the program and execute it.
+- Allow the possibility to integrate an Excel "black" list → _X wants to be seated next to Y_, or _X doesn't want to be seated next to Y_
+- Create an HTML page to interact with your program in a browser: 
+  - Allows to choose any Excel file from your computer
+  - Allows you to interact with the different features of the program and to execute it
 
-### Constraints
+### Quality Assurance
 
-#### Imports
-
-```python
-# You CAN'T import like this:
-import whatever_file
-# You CAN'T import like this:
-import .whatever_file
-# You CAN'T import like this:
-from .whatever_file.whatever_function
-# You CAN'T import like this:
-from .whatever_function
-# You CAN'T import like this:
-from whatever_file
-```
-
-```python
-# You CAN import like this:
-from whatever_file import whatever_function_or_class
-```
-
-#### Code style
-
-- Each **class** should have a [`__str__()` method](https://medium.com/swlh/understanding-repr-and-str-in-python-65dd41538943).
-- Each **function or class** has to be **typed**
-- Each **function or class** has to contain a **docstring** formatted like this:
-
-```python
-def add(number_one: int, number_two: int) -> int:
-    """
-    Function that will perform the add operation between two numbers (in params).
-
-    :param number_one: An int that will be added to the second parameter.
-    :param number_two: An int that will be added to the fist parameter.
-    :return: An int that is the result of the two params being added to each other.
-    """
-    result = number_one + number_two
-    return result
-```
-
-- Your code should be **formatted** with [black](https://pypi.org/project/black/).
-- Your code should be **commented**.
-- Your code should be **cleaned of any commented unused code**.
-
-#### Repo
-
-- Your repo should only contain the files specified.
-- Your README should be nice and complete (see the #Deliverables section below). Feel free to add more information.
+Read our "Coding Best Practices Manifesto" and apply what's in there!
 
 Please keep the must-have version separate from the nice-to-have version by using a different branch on GitHub. Please specify that in your README too.
 
 ### Steps
 
-It goes without saying, but please, **read through all of this before starting.**
-
-Make sure that you understand the concept of OOP, as this project will make intensive use of it.
-
-
-_How to program a python project ?_
-Until now, you've mostly been working on `.ipynb` files, so called _Jupyter Notebooks_ or `IPython notebooks`.
-For a project like this, notebooks are really not a good idea. You'll notice the `.py` file extension in the coming files. These are **python** source files.
-Unlike notebooks, which get read using `jupyter` or `jupyter-lab`,
-editing python source files is done in an [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) or a text editor.
-
-Here are a list of popular IDEs or text editors to choose from:
-
-- [vscode](https://code.visualstudio.com/) (IDE/Text editor)
-- [PyCharm](https://www.jetbrains.com/pycharm/) (IDE)
-- [Atom](https://atom.io/) (Text editor)
-- [Sublime Text](https://www.sublimetext.com/) (Text editor)
-- [vim](https://www.vim.org/) (Text editor)
-
-Now, let's get to the heart of it!
-And I repeat, **read through all of this before starting.**
+Now, let's get to the heart of it. **Read through all of the below before starting!**
 
 #### 0. preparation
 
-Create a GitHub repo called `challenge-openspace-classifier` and share it with your team if needed. In this repository create 2 files:
+Create a GitHub repo called `challenge-openspace-classifier` and share it with your team if needed. 
 
+Create two files:
 - `README.md`
 - `main.py`
 
-And a folder:
-
-- `utils`
-
-In the `utils` folder create 3 files:
-
+Create a `utils` folder with three files:
 - `file_utils.py`
 - `table.py`
 - `openspace.py`
 
 You're ready to go!
 
-If you're doing it as a team  →  split the work between the members in a Trello board (Kanban like setup) and let each member create a feature branch to develop his own features
+If you're doing it as a team → split the work between the members in a Trello board (using a Kanban-like setup) and let each member create a feature branch to develop his own work.
 
 #### 1. A table
 
-We define a table with how many seats it encompasses and we define the object in the `table.py` file
+You need to define a useful class structure to generate a table and the amount of seats it has. This is set up in the `table.py` file.
 
 ##### 1.1 Seat
 
-In `table.py`:
+In `table.py`, create a class called `Seat` with two attributes:
+- `free` which is a boolean
+- `occupant` which is a string
 
-Create a class called `Seat` with two attributes:
-
-- `free` which is a boolean.
-- `occupant` which is a string.
-
-and 2 functions : 
-
+Add two methods to the same class: 
 - `set_occupant(name)` which allows the program to assign someone a seat if it's free
-- `remove_occupant()` which  remove someone from a seat and return the name of the person occupying the seat before
+- `remove_occupant()` which removes someone from a seat and returns the name of the person occupying the seat before
 
 ##### 1.2 Table
 
-In the same file, create a class `Table` with ? attributes:
-
+Create another class `Table` with at least the below attributes:
 - `capacity` which is an integer
 - `seats` which is a list of `Seat` objects (size = `capacity`)
 
-and 3 functions : 
-- `has_free_spot()` that returns a boolean (True if a spot is available)
+Go on and add some methods to the class:
+- `has_free_spot()` that returns a boolean (`True` if a spot is available)
 - `assign_seat(name)` that places someone at the table
 - `left_capacity()` that returns an integer
 
-#### 2. An openspace
+#### 2. An open space
 
-In `openspace.py` create a class `Openspace` that contains these attributes:
+In `openspace.py`, create a class `OpenSpace` that contains these attributes:
+- `tables` which is a list of `Table` _(you will need to import `Table` from `table.py`!)_
+- `number_of_tables` which is an integer
 
-- `tables` which is a list of `Table`. _(you will need to import `Table` from `table.py`)_. 
-- `number_of_tables` which is an integer.
+Add some methods:
+- `organize(names)` that will **randomly** assign people to `Seat` objects in the different `Table` objects
+- `display()` to display the different tables and there occupants in a nice and readable way
+- `store(filename)` to store the repartition in an Excel file
 
-And some methods:
-
-- `organize(names)` that will:
-  - **randomly** assign people to `Seat` objects in the different `Table` objects.
-- `display()` display the different tables and there occupants in a nice and readable way
-- `store(filename)` store the repartition in an excel file
-
-#### 3. Starting point
+#### 3. Main script
 
 In `main.py`:
-
 - Import everything you need to launch the organizer
-- load the colleagues from the excel file defined in the config file
-- Launch the organizer. Display the results
+- Load the colleagues from the Excel file defined in the config file
+- Launch the organizer and display the results
 
 ## Deliverables
 
-1. Publish your source code on the GitHub repository.
+1. Publish your source code on the GitHub repository
 2. Pimp up the README file:
    - Description
    - Installation
@@ -218,23 +141,22 @@ In `main.py`:
    - (Visuals)
    - (Contributors)
    - (Timeline)
-   - (Personal situation)
 
 ## Evaluation criteria
 
-| Criteria       | Indicator                                                    | Yes/No |
-| -------------- | ------------------------------------------------------------ | ------ |
-| 1. Is complete | The student has realized all must-have features.             |        |
-|                | There is a published GitHub repo available.                  |        |
-|                | The program runs until the end without any error.               |        |
-|                | The program starts by running `python main.py` in the terminal. |        |
-| 2. Is correct  | The code is well typed.                                      |        |
-|                | There is a docstring for every function/method/class.        |        |
-|                | All the constraints are respected.                           |        |
-| 3. Is great    | There is an interaction with the user.                       |        |
-|                | The algorithm doesn't create table with alone people.                    |        |
-|                | The result is nicely displayed and can be saved in a file. |     |
-|                | The program has been developped has a team using proper git flow and management system
+| Criteria       | Indicator                                                      | Yes/No |
+| -------------- | -------------------------------------------------------------- | ------ |
+| 1. Is complete | The student has implemented all must-have features             |        |
+|                | There is a published GitHub repo available                     |        |
+|                | The program runs until the end without any error               |        |
+|                | The program starts by running `python main.py` in the terminal |        |
+| 2. Is correct  | The code is well typed                                         |        |
+|                | There is a docstring for every function/method/class           |        |
+|                | All other quality assurance guidelines are respected           |        |
+| 3. Is great    | There is an interaction with the user                          |        |
+|                | The algorithm doesn't create table with people sitting alone   |        |
+|                | The result is nicely displayed and can be saved in a file      |        |
+|                | The team used a proper Git workflow and task management system |        |
 
 ## Final note
 

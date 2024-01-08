@@ -1,6 +1,6 @@
 # Organize a room with OOP in Python
 
-- Repository: `openspace-organizer`
+- Repository: `openspace_organizer`
 - Type: `Consolidation`
 - Duration: `2 days`
 - Deadline: `xx/xx/20xx 5:00 PM`

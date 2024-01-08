@@ -8,18 +8,16 @@
 
 ## Mission Objectives
 
-Create an algorithm that randomly assign people to a spot in the open space.
-
-![musical chairs](https://i.gifer.com/8OFn.gif)
+Create an algorithm that randomly assigns people to a spot in the open space.
 
 ## Learning Objectives
 
-- Make good usage of classes using the Object-oriented programming (OOP) paradigm
+- Make good use of classes using the Object-oriented programming (OOP) paradigm
 - Use imports in a clean way
 - Use a clean architecture
 - Read data from an Excel file
 - Structure a project
-- [OPTIONAL if in teams] Use Git as a team with Trello and integrate versioning and management
+- [If in teams] Use Git as a team with Trello and integrate versioning and management
   - Split functionalities into tasks
   - Assign tasks to people
   - Develop functionalities on separate branches

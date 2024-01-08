@@ -1,4 +1,4 @@
-# Challenge: Use OOP in Python to organize the training room
+# Organize a room with OOP in Python
 
 - Repository: `openspace-organizer`
 - Type: `Consolidation`

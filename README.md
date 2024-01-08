@@ -140,9 +140,9 @@ In `main.py`:
    - (Contributors)
    - (Timeline)
 
-## Evaluation criteria
+## Evaluation
 
-| Criteria       | Indicator                                                      | Yes/No |
+| Criterion      | Indicator                                                      | Yes/No |
 | -------------- | -------------------------------------------------------------- | ------ |
 | 1. Is complete | The student has implemented all must-have features             |        |
 |                | There is a published GitHub repo available                     |        |

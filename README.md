@@ -70,9 +70,10 @@ Let's get to the heart of it. **Read through all of the below before starting!**
 
 Create a GitHub repo called `openspace-organizer` and share it with your team if applicable. 
 
-Create two files:
+Create three files:
 - `README.md`
 - `main.py`
+- `colleagues.xlsx` (or a `.txt` file if you don't have Excel)
 
 Create a `src` folder (aka where the source code resides) with three files:
 - `utils.py`

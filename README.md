@@ -80,6 +80,14 @@ Create a `src` folder (aka where the source code resides) with three files:
 - `table.py`
 - `openspace.py`
 
+Your `main.py` script should look like this:
+```python
+# imports here
+
+if __name__ == "__main__":
+    # your code here
+```
+
 You're ready to go!
 
 If you're doing it as a team → split the work between the members in a Trello board (using a Kanban-like setup) and let each member create a feature branch to develop his own work.

@@ -1,6 +1,6 @@
 # Organize a room with OOP in Python
 
-- Repository: `openspace_organizer`
+- Repository: `openspace-organizer`
 - Type: `Consolidation`
 - Duration: `2 days`
 - Deadline: `xx/xx/20xx 5:00 PM`
@@ -68,7 +68,7 @@ Let's get to the heart of it. **Read through all of the below before starting!**
 
 #### 0. preparation
 
-Create a GitHub repo called `challenge-openspace-organiser` and share it with your team if applicable. 
+Create a GitHub repo called `openspace-organizer` and share it with your team if applicable. 
 
 Create two files:
 - `README.md`
